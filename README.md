@@ -1,7 +1,7 @@
 
 # [CVIP 25]SADA: Unsupervised Camouflaged Object Detection using Foundation Models and Cue-Guided Refinement
 
-![Framework](figure/Architecture.png)
+![Framework](figure/CVIP_Architecture(1).png)
 
 #Installation 
 absl-py==2.1.0
