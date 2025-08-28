@@ -1,0 +1,30 @@
+{
+    "CAMO": {
+        "CAMO": {
+            "path": "./../map/Exp-11/CAMO",
+            "prefix": "camourflage_",
+            "suffix": ".png"
+        }
+    },
+    "CHAMELEON": {
+        "CHAMELEON": {
+            "path": "./../map/Exp-11/CHAMELEON",
+            "prefix": "animal-",
+            "suffix": ".png"
+        }
+    },
+    "COD10K": {
+        "COD10K": {
+            "path": "./../map/Exp-11/COD10K",
+            "prefix": "COD10K-",
+            "suffix": ".png"
+        }
+    },
+    "HC4K": {
+        "HC4K": {
+            "path": "./../map/Exp-11/HC4K",
+            "prefix": "",
+            "suffix": ".png"
+        }
+    }
+}
