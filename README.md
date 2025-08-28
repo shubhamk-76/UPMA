@@ -29,7 +29,7 @@
 
 # Experimental Results
 ![Result](figure/Result.png)
-![Qualitative Result](figure/Qualitative_Result.png)
+![Qualitative Result](figure/Qualititative_Result.png)
 
 # Acknowledgement
 [SAM- Segment-Anything](https://github.com/facebookresearch/segment-anything)
