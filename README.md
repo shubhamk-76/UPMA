@@ -1,37 +1,56 @@
-
-# [CVIP 25] UPMA: Unsupervised Pseudo Mask Attention for Camouflaged Object Detection using Foundation Models and Cue-Guided Refinement
+# [CVIP 2025] UPMA: Unsupervised Pseudo Mask Attention for Camouflaged Object Detection using Foundation Models and Cue-Guided Refinement
 
 ![Framework](figure/Architecture_Diagram.png)
 
-# Our Work
-[UPMA]()
-# Download UPMA Benchmarks Dataset.
-- COD10K: [google](https://dengpingfan.github.io/pages/COD.html) 
-- CAMO: [google](https://sites.google.com/view/ltnghia/research/camo) 
-- NC4K: [google] (https://github.com/JingZhang617/COD-Rank-Localize-and-Segment)
-- CHAMELEON: [google] (https://drive.google.com/drive/folders/1LN4sP2DRtWcWHcgDcaZcWBVZfoJKccJU?usp=drive_link) 
+---
+## 📌 Overview
+**UPMA** introduces an unsupervised approach for **Camouflaged Object Detection (COD)** that leverages **foundation models** to generate high-quality pseudo masks, followed by **cue-guided refinement**.  
 
-# Generate Pseudo labels.
-- We divided the dataset in to train and test. We took 3040 images from COD10K and 1000 images from CAMO in to the training set.
-- We generated pseudo labels out these images using Fondation models shown in architecture.
-- We have provided code to generate pseudo labels and store the best mask.
+This pipeline avoids the need for expensive manual and it is highly interpreteble than other UCOD methods.
+---
 
-# Cue Region extraction
-- Insert the proper file name and run `python Cue_gen.py` 
+## 📂 Datasets
+We evaluated UPMA on four standard COD datasets:  
 
-# Training
-- Run `python train.py` 
+- **COD10K**: [Link](https://dengpingfan.github.io/pages/COD.html)  
+- **CAMO**: [Link](https://sites.google.com/view/ltnghia/research/camo)  
+- **NC4K**: [Link](https://github.com/JingZhang617/COD-Rank-Localize-and-Segment)  
+- **CHAMELEON**: [Link](https://drive.google.com/drive/folders/1LN4sP2DRtWcWHcgDcaZcWBVZfoJKccJU?usp=drive_link)  
 
-# Test and Evaluate
-- Change your path and filename accordingly
-- Run python test.py
-- results.txt will be stroed in PySODEvalToolkit
+**Training Split:**  
+- 3,040 images from **COD10K**  
+- 1,000 images from **CAMO**
 
-# Experimental Results
-![Result](figure/Result.png)
+---
+
+## ⚙️ How to Reproduce
+
+Getting started:  
+### 1. Generate Pseudo Masks -> 2. Generate Cue mask(S)  -> 3. Training
+```bash
+cd PseudoMaskGenerator/scripts
+python generate_pseudo_mask.py
+python Cue_gen.py
+python train.py
+python test.py
+PySODEvalToolkit/results.txt
+```
+
+### Our Results
+![Result](figure/Result.png) 
 ![Qualitative Result](figure/Qualititative_Result.png)
 
-# Acknowledgement
-[SAM- Segment-Anything](https://github.com/facebookresearch/segment-anything)
-[PCOD](https://arxiv.org/abs/2408.10777)
+### Acknowledgement
+
+@misc{kirillov2023segment,
+      title={Segment Anything}, 
+      author={Alexander Kirillov and Eric Mintun and Nikhila Ravi and Hanzi Mao and Chloe Rolland and Laura Gustafson and Tete Xiao and Spencer Whitehead and Alexander C. Berg and Wan-Yen Lo and Piotr Dollár and Ross Girshick},
+      year={2023},
+      eprint={2304.02643},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2304.02643}, 
+}
+
+
 
