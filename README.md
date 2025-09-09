@@ -36,9 +36,25 @@ python test.py
 PySODEvalToolkit/results.txt
 ```
 
-### Our Results
-![Result](figure/Result.png) 
-![Qualitative Result](figure/Qualititative_Result.png)
+## 📊 Our Results
+
+### Quantitative Results
+![Result](figure/Result.png)  
+
+- Our results are **highlighted in yellow**.  
+- We present two variants of our **Pseudo Mask Generator**:  
+  - **w/B** → with bounding box guidance  
+  - **wo/B** → without bounding box guidance  
+
+---
+
+### Qualitative Results
+![Qualitative Result](figure/Qualititative_Result.png)  
+
+**Qualitative comparison on CAMO dataset:**  
+- Competing methods (**UCOS-DA**, **FOUND**) sometimes produce sharper boundaries but often introduce **background artifacts and false positives** (red, Rows 2, 4, 6).  
+- **UPMA** achieves **smoother masks** that more consistently capture the **entire camouflaged object** with fewer spurious regions (green, Rows 2, 4, 6).  
+
 
 ### Acknowledgement
 
