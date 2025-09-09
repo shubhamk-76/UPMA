@@ -6,7 +6,7 @@
 ## 📌 Overview
 **UPMA** introduces an unsupervised approach for **Camouflaged Object Detection (COD)** that leverages **foundation models** to generate high-quality pseudo masks, followed by **cue-guided refinement**.  
 
-This pipeline avoids the need for expensive manual and it is highly interpreteble than other UCOD methods.
+This pipeline avoids the need for expensive manual annotations and it is highly interpreteble than other UCOD methods.
 ---
 
 ## 📂 Datasets
@@ -20,6 +20,7 @@ We evaluated UPMA on four standard COD datasets:
 **Training Split:**  
 - 3,040 images from **COD10K**  
 - 1,000 images from **CAMO**
+- Rest all images we used for testing.
 
 ---
 
@@ -58,15 +59,7 @@ PySODEvalToolkit/results.txt
 
 ### Acknowledgement
 
-@misc{kirillov2023segment,
-      title={Segment Anything}, 
-      author={Alexander Kirillov and Eric Mintun and Nikhila Ravi and Hanzi Mao and Chloe Rolland and Laura Gustafson and Tete Xiao and Spencer Whitehead and Alexander C. Berg and Wan-Yen Lo and Piotr Dollár and Ross Girshick},
-      year={2023},
-      eprint={2304.02643},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2304.02643}, 
-}
+**Kirillov, A., Mintun, E., Ravi, N., Mao, H., Rolland, C., Gustafson, L., Xiao, T., Whitehead, S., Berg, A. C., Lo, W., Dollár, P., & Girshick, R. (2023).** *Segment Anything.* arXiv. https://arxiv.org/abs/2304.02643
 
 
 
